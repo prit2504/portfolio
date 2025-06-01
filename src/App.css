@@ -1,0 +1,17 @@
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    /* color: #ffff00; */
+}
+section {
+    background: linear-gradient(to bottom, #000521, #040928);
+    height: 100vh;
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+}
