@@ -39,9 +39,9 @@ const Hero = () => (
             </motion.p>
 
             <motion.button
-                initial={{ opacity: 0, x: -140 }}
+                initial={{ opacity: 0, x: -120 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 2, type: 'spring', stiffness: 25, delay:1.2 }}
+                transition={{ duration: 2, delay:1.2 }}
                 className="bg-yellow-400 px-8 py-3 rounded-full text-black shadow-lg mt-8 font-semibold hover:bg-yellow-300 transition w-[120px]"
 
             >
