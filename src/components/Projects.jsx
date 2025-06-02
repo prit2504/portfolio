@@ -27,12 +27,12 @@ const Projects = () => {
       techStack: ["React.js", "Node.js", "Express.js", "MongoDB"],
       image: [img_1, img_2, img_3, img_4, img_5, img_6, img_7, img_8],
     },
-    {
-      title: "Online Education Platform",
-      description: "A platform for resolving doubts and online education.",
-      techStack: ["React.js", "Node.js", "Express.js", "MongoDB"],
-      image: [img_1, img_2, img_3, img_4, img_5, img_6, img_7, img_8],
-    },
+    // {
+    //   title: "Online Education Platform",
+    //   description: "A platform for resolving doubts and online education.",
+    //   techStack: ["React.js", "Node.js", "Express.js", "MongoDB"],
+    //   image: [img_1, img_2, img_3, img_4, img_5, img_6, img_7, img_8],
+    // },
   ];
 
   const btnBase = "text-white font-semibold py-3 px-4 transition-all duration-200";

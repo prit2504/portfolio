@@ -1,5 +1,6 @@
 import './App.css'
 import About from './components/About'
+import Contect from './components/Contect'
 import Hero from './components/Hero'
 import Projects from './components/Projects'
 import Skills from './components/Skills'
@@ -25,7 +26,7 @@ const App = () => {
       </section>
 
       <section id='contact-me' className='sec'>
-          Contact Me
+          <Contect/>
       </section>
 
 
