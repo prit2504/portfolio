@@ -8,7 +8,7 @@ import Skills from './components/Skills'
 
 const App = () => {
   return (
-    <div className='text-white main-sec'>
+    <div className='text-white main-sec '>
       <section className='sec'>
         <Hero />
       </section>
