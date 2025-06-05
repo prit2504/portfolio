@@ -12,6 +12,8 @@ import tailwind_img from '../assets/tailwindcss.png'
 import spring_img from '../assets/spring-boot.png'
 import python_img from '../assets/python.png'
 import cloudinary_img from '../assets/cloudinary-icon-8x.png'
+import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 
 let skillsArray = [
     {
@@ -96,10 +98,49 @@ const Skills = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 2 }}
             className='w-full h-screen pt-[70px] flex flex-col  items-center bg-gradient-to-br from-blue-500 via-purple-500 to-yellow-200'>
-            <div className='w-[100%] h-[90%] sm:w-[80%] sm:h-[80%] flex flex-col justify-evenly items-center px-7 pb-10'>
-                <motion.h1 className='mb-4 text-2xl font-bold text-yellow-400'>
-                    Skills
-                </motion.h1>
+
+            <Helmet>
+                <title>Skills | Prit Panchal - Full Stack Developer</title>
+                <meta
+                    name="description"
+                    content="Explore the front-end and back-end development skills of Prit Panchal, including React.js, Node.js, Java, MongoDB, Spring Boot, Tailwind CSS, and more."
+                />
+                <meta
+                    name="keywords"
+                    content="Prit Panchal, Web Developer Skills, MERN Stack, Full Stack Developer, React, Node.js, Java, Spring Boot, Tailwind, MongoDB"
+                />
+                <meta name="author" content="Prit Panchal" />
+
+                {/* Open Graph for social sharing */}
+                <meta property="og:title" content="Skills | Prit Panchal - Full Stack Developer" />
+                <meta
+                    property="og:description"
+                    content="Full stack development skills of Prit Panchal. Covers front-end, back-end, and DevOps tools like Cloudinary."
+                />
+                <meta property="og:url" content="https://prit2504.github.io/portfolio/skills" />
+                <meta property="og:type" content="website" />
+
+                {/* Twitter Card */}
+                <meta name="twitter:title" content="Skills | Prit Panchal - Full Stack Developer" />
+                <meta
+                    name="twitter:description"
+                    content="Tech stack and tools used by full stack developer Prit Panchal including React, Node, Spring Boot, MongoDB."
+                />
+                <meta name="twitter:card" content="summary_large_image" />
+            </Helmet>
+
+            <div className='w-full relative'>
+
+                <h1 className='text-2xl text-center mb-3 text-yellow-400 font-bold'>Skills</h1>
+                <Link to={'/portfolio/about'}>
+                    <i className="absolute top-0 ml-5 text-4xl fa fa-chevron-circle-left" aria-hidden="true"></i>
+                </Link>
+                <Link to={'/portfolio/projects'}>
+                    <i className="absolute top-0 right-0 mr-5 fa fa-chevron-circle-right text-4xl cursor-pointer duration-300 hover:scale-110" aria-hidden="true"></i>
+                </Link>
+            </div>
+            <div className='w-[100%] h-[90%] sm:w-[80%] sm:h-[80%] flex flex-col items-center px-7 pb-10'>
+
 
 
                 <ul className='grid sm:grid-cols-4 grid-cols-3 w-full h-full gap-3 sm:gap-10'>

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import img_1 from '../assets/project_images/E-Com/Screenshot 2025-05-01 231220.webp';
 import img_2 from '../assets/project_images/E-Com/Screenshot 2025-05-01 231316.webp';
 import img_3 from '../assets/project_images/E-Com/Screenshot 2025-05-01 231408.webp';
@@ -45,9 +47,77 @@ const Projects = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 2 }}
+      className="min-h-screen w-full flex flex-col items-center px-4 sm:px-10 pt-[70px] pb-10 bg-gradient-to-br from-blue-500 via-purple-500 to-yellow-200">
 
-      className="min-h-screen w-full flex flex-col items-center px-4 sm:px-10 pt-[90px] pb-10 bg-gradient-to-br from-blue-500 via-purple-500 to-yellow-200">
-      <h1 className="text-2xl font-bold text-yellow-400 mb-6">Projects</h1>
+      <Helmet>
+        <title>Projects | Prit Panchal - Full Stack Developer</title>
+        <meta
+          name="description"
+          content="Explore featured full-stack projects by Prit Panchal, including an E-commerce platform and PixMerge file utility tool. Built with React, Node.js, Express, MongoDB, and Tailwind."
+        />
+        <meta
+          name="keywords"
+          content="Full Stack Projects, MERN Stack, React.js, Node.js, MongoDB, PixMerge, E-commerce Website, Prit Panchal"
+        />
+        <meta name="author" content="Prit Panchal" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Projects | Prit Panchal - Full Stack Developer" />
+        <meta
+          property="og:description"
+          content="See top projects by Prit Panchal using MERN stack technologies. Includes full-stack e-commerce site and PixMerge file tool."
+        />
+        <meta property="og:url" content="https://prit2504.github.io/portfolio/projects" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter */}
+        <meta name="twitter:title" content="Projects | Prit Panchal - Full Stack Developer" />
+        <meta
+          name="twitter:description"
+          content="Check out major MERN-based projects including E-commerce and PixMerge tool."
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+
+        {/* JSON-LD Schema */}
+        <script type="application/ld+json">
+          {`
+        {
+          "@context": "https://schema.org",
+          "@type": "Portfolio",
+          "name": "Prit Panchal",
+          "url": "https://prit2504.github.io/portfolio/projects",
+          "description": "Portfolio projects by Prit Panchal including E-commerce and PixMerge tools.",
+          "creator": {
+            "@type": "Person",
+            "name": "Prit Panchal"
+          },
+          "mainEntity": [
+            {
+              "@type": "CreativeWork",
+              "name": "E-commerce Website",
+              "description": "Full stack e-commerce site with cart, admin, payments, built with MERN stack."
+            },
+            {
+              "@type": "CreativeWork",
+              "name": "PixMerge",
+              "description": "File utility tool for PDFs and images built with Node.js and Tailwind."
+            }
+          ]
+        }
+      `}
+        </script>
+      </Helmet>
+
+      <div className='w-full relative'>
+
+        <h1 className='text-2xl text-center mb-3 text-yellow-400 font-bold'>Projects</h1>
+        <Link to={'/portfolio/skills'}>
+          <i className="absolute top-0 ml-5 text-4xl fa fa-chevron-circle-left" aria-hidden="true"></i>
+        </Link>
+        <Link to={'/portfolio/contact'}>
+          <i className="absolute top-0 right-0 mr-5 fa fa-chevron-circle-right text-4xl cursor-pointer duration-300 hover:scale-110" aria-hidden="true"></i>
+        </Link>
+      </div>
 
       <div className="w-full max-w-6xl flex flex-col gap-6 bg-white/20 backdrop-blur-md p-4 sm:p-8 rounded-2xl shadow-xl border border-white/30">
         <AnimatePresence mode="wait">

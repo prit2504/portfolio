@@ -34,11 +34,12 @@ const Navbar = () => {
               className="bg-white text-black rounded-lg py-1 px-3 font-bold text-sm cursor-pointer"
               onClick={() => setMenuOpen(prev => !prev)}
             >
-              Menu
+              <i className="fa fa-bars" aria-hidden="true"></i>
+
             </button>
             {menuOpen && (
               <ul className="absolute right-0 mt-2 bg-blue-600 text-white rounded-lg shadow-lg w-40 text-sm font-bold">
-                <li className={`border-b border-white/20 px-4 py-2 hover:bg-blue-700 ${isActive("/portfolio") ? activeClass : ""}`}>
+                <li className={`border-b border-white/20 px-4 py-2 hover:bg-blue-700 ${isActive("/portfolio/") ? activeClass : ""}`}>
                   <Link to="/portfolio" onClick={() => setMenuOpen(false)}>Home</Link>
                 </li>
                 <li className={`border-b border-white/20 px-4 py-2 hover:bg-blue-700 ${isActive("/portfolio/about") ? activeClass : ""}`}>
@@ -59,7 +60,7 @@ const Navbar = () => {
         ) : (
           <ul className='flex gap-3 sm:gap-5 text-sm text-white font-bold'>
             <li>
-              <Link to="/portfolio" className={`${isActive("/portfolio") ? activeClass : linkClass}`}>Home</Link>
+              <Link to="/portfolio" className={`${isActive("/portfolio/") ? activeClass : linkClass}`}>Home</Link>
             </li>
             <li>
               <Link to="/portfolio/about" className={`${isActive("/portfolio/about") ? activeClass : linkClass}`}>About</Link>
