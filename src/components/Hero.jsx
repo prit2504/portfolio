@@ -1,13 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Navbar from "./Navbar";
+import { Link } from "react-router-dom";
+
 
 const Hero = () => (
-    <div className="relative flex flex-col gap-10 bg-gradient-to-br from-blue-500 via-purple-500/80 to-yellow-200/70 h-full">
-        <Navbar />
+    <div className="flex flex-col gap-10 h-[100%] pt-[100px]">
+        
         <div className="absolute w-40 h-40 bg-yellow-300 rounded-full top-25 left-10 blur-2xl opacity-30"></div>
         <div className="absolute w-52 h-52 bg-blue-300 rounded-full bottom-25 right-10 blur-2xl opacity-30"></div>
-        <motion.div className="text-center flex flex-col justify-center items-center">
+        <div className="text-center flex flex-col justify-center items-center">
             <motion.h2
                 initial={{ opacity: 0, x: -140 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -49,17 +50,17 @@ const Hero = () => (
             >
                 Hire me!
             </motion.button>
-            <motion.a
+            {/* <motion.p
                 initial={{ opacity: 0, x: 140 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 2, type: 'spring', stiffness: 25, delay: 1.5 }}
-                href="#about"
                 smooth={true}
                 className="absolute w-full bottom-[15px] text-yellow-400 font-bold cursor-pointer mt-16 block text-lg font-medium hover:underline]"
             >
-                Scroll for more ↓
-            </motion.a>
-        </motion.div>
+                <Link to="/portfolio/about">Scroll for more ↓</Link>
+                
+            </motion.p> */}
+        </div>
     </div>
 );
 
